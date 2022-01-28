@@ -9,7 +9,7 @@ async function handleRequest(event) {
     return new Response("", {
       status: 302,
       headers: {
-        location: "https://github.com/benborgers/opensheet#readme",
+        location: "https://github.com/chukon/opensheet#readme",
       },
     });
   }
@@ -42,7 +42,7 @@ async function handleRequest(event) {
 
     const sheetData = await (
       await fetch(
-        `https://sheets.googleapis.com/v4/spreadsheets/${id}?key=${GOOGLE_API_KEY}`
+        `https://sheets.googleapis.com/v4/spreadsheets/${id}?key=AIzaSyDevceb_oWk50fHFj30vDn7lDFOJR5KGeg`
       )
     ).json();
 
@@ -62,7 +62,7 @@ async function handleRequest(event) {
 
   const result = await (
     await fetch(
-      `https://sheets.googleapis.com/v4/spreadsheets/${id}/values/${sheet}?key=${GOOGLE_API_KEY}`
+      `https://sheets.googleapis.com/v4/spreadsheets/${id}/values/${sheet}?key=AIzaSyDevceb_oWk50fHFj30vDn7lDFOJR5KGeg`
     )
   ).json();
 
